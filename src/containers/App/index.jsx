@@ -12,6 +12,7 @@ import GlobalStyles from '../../styled/Global';
 
 // utils
 import { themeMap } from './utils';
+import Link from '../../styled/Link';
 
 function App() {
   const time = timeChecker();
@@ -24,7 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <div>It's already {time}</div>
+      <Link href="/">Welcome to altered future</Link>
     </ThemeProvider>
   );
 }

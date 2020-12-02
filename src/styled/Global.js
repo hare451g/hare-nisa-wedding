@@ -1,12 +1,11 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle(
-  ({ theme: { color, typography } }) => css`
+  ({ theme: { colors, typography } }) => css`
     body {
       margin: 0;
       padding: 0;
-
-      background-color: ${color.background};
+      background-color: ${colors.background};
     }
 
     * {

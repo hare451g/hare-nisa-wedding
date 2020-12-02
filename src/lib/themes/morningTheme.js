@@ -1,14 +1,16 @@
-import baseTheme from './baseTheme';
+import typography from './typography';
+import colors from './colors';
 
 const morningTheme = {
-  ...baseTheme,
-  color: {
-    background: '#f3f2ef',
-    foreground: '#333333',
+  colors: {
+    ...colors,
+    background: colors.gray6,
+    foreground: colors.darkGray3,
   },
   typography: {
-    ...baseTheme.typography,
-    color: '#3f3f3f',
+    ...typography,
+    color: colors.darkGray3,
+    cta: colors.blue,
   },
 };
 

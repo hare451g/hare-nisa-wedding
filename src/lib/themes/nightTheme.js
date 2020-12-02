@@ -1,14 +1,16 @@
-import baseTheme from './baseTheme';
+import typography from './typography';
+import colors from './colors';
 
 const nightTheme = {
-  ...baseTheme,
-  color: {
-    background: '#333333',
-    foreground: '#f3f3f3',
+  colors: {
+    ...colors,
+    background: colors.darkGray6,
+    foreground: colors.gray5,
   },
   typography: {
-    ...baseTheme.typography,
-    color: '#f4f4f4',
+    ...typography,
+    color: colors.gray5,
+    cta: colors.blue,
   },
 };
 

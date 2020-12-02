@@ -1,14 +1,16 @@
-import baseTheme from './baseTheme';
+import colors from './colors';
+import typography from './typography';
 
 const noonTheme = {
-  ...baseTheme,
-  color: {
-    background: '#f3f3f3',
-    foreground: '#333333',
+  colors: {
+    ...colors,
+    background: colors.gray6,
+    foreground: colors.darkGray5,
   },
   typography: {
-    ...baseTheme.typography,
-    color: '#3f3f3f',
+    ...typography,
+    color: colors.darkGray5,
+    cta: colors.blue,
   },
 };
 
