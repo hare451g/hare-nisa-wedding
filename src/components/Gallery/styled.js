@@ -6,6 +6,7 @@ const GalleryContainer = styled.div`
   grid-template-rows: repeat(14, 5vw);
   grid-gap: 15px;
 
+  /* Noon Gallery */
   .noon_1 {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -46,6 +47,35 @@ const GalleryContainer = styled.div`
     grid-column-end: 5;
     grid-row-start: 11;
     grid-row-end: 15;
+  }
+
+  /* Night Gallery */
+  .night_1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  .night_2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  .night_3 {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 10;
+    grid-row-end: 15;
+  }
+
+  .night_4 {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 10;
   }
 `;
 

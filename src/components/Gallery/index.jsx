@@ -1,4 +1,4 @@
-const { morningGallery, noonGallery } = require('./constants');
+const { nightGallery, noonGallery } = require('./constants');
 const { GalleryContainer, GalleryImage, Title } = require('./styled');
 
 function Gallery() {
@@ -6,7 +6,7 @@ function Gallery() {
     <>
       <Title>Gallery</Title>
       <GalleryContainer>
-        {noonGallery.map(({ key, src }, index) => (
+        {nightGallery.map(({ key, src }, index) => (
           <GalleryImage className={key} key={key} src={src} />
         ))}
       </GalleryContainer>
