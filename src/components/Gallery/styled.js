@@ -6,6 +6,49 @@ const GalleryContainer = styled.div`
   grid-template-rows: repeat(14, 5vw);
   grid-gap: 15px;
 
+  /* Morning Gallery */
+  .morning_1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  .morning_2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+
+  .morning_3 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 10;
+  }
+
+  .morning_4 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 10;
+  }
+
+  .morning_5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 10;
+    grid-row-end: 15;
+  }
+
+  .morning_6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 10;
+    grid-row-end: 15;
+  }
+
   /* Noon Gallery */
   .noon_1 {
     grid-column-start: 1;
