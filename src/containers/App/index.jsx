@@ -19,6 +19,7 @@ import GuestbookForm from '../GuestbookForm';
 
 // utils
 import { themeMap } from './utils';
+import Rundown from '../../components/Rundown';
 
 function App() {
   const time = timeChecker();
@@ -32,8 +33,15 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Container>
-        <Hero />
-        <GuestbookForm />
+        <section>
+          <Hero />
+        </section>
+        <section>
+          <Rundown />
+        </section>
+        <section>
+          <GuestbookForm />
+        </section>
       </Container>
     </ThemeProvider>
   );
