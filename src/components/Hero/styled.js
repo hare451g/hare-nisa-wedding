@@ -25,7 +25,6 @@ const HeroTitle = styled.h1(
   ({ theme: { typography, colors } }) => css`
     font-family: ${typography.family.display};
     font-size: 42px;
-    color: ${colors.white};
     font-weight: 700;
     width: 100%;
   `
