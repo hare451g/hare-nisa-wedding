@@ -10,9 +10,11 @@ import timeChecker from '../../lib/timeChecker';
 // Styled components
 import GlobalStyles from '../../styled/Global';
 
+// containers
+import GuestbookForm from '../GuestbookForm';
+
 // utils
 import { themeMap } from './utils';
-import Link from '../../styled/Link';
 
 function App() {
   const time = timeChecker();
@@ -25,7 +27,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Link href="/">Welcome to altered future</Link>
+      <GuestbookForm />
     </ThemeProvider>
   );
 }

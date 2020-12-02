@@ -8,7 +8,7 @@ const typography = {
     small: '14px',
     medium: '16px',
     large: '24px',
-    display: '42px',
+    display: '32px',
   },
 };
 
