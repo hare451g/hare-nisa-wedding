@@ -7,7 +7,11 @@ import noonTheme from '../../lib/themes/noonTheme';
 // utils
 import timeChecker from '../../lib/timeChecker';
 
+// components
+import Hero from '../../components/Hero';
+
 // Styled components
+import Container from '../../styled/Container';
 import GlobalStyles from '../../styled/Global';
 
 // containers
@@ -27,7 +31,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <GuestbookForm />
+      <Container>
+        <Hero />
+        <GuestbookForm />
+      </Container>
     </ThemeProvider>
   );
 }
