@@ -13,11 +13,9 @@ const FormGroup = styled(Flex)`
   margin-bottom: 16px;
 `;
 
-const Subtitle = styled.h1(
-  ({ theme: { typography } }) => css`
-    text-align: center;
-  `
-);
+const Subtitle = styled.h1`
+  text-align: center;
+`;
 
 const Title = styled.h1(
   ({ theme: { typography } }) => css`

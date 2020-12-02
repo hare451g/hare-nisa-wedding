@@ -11,9 +11,12 @@ const Textarea = styled.textarea(
     transition: 100ms;
     width: ${width || 'auto'};
 
+    :active,
     :focus {
-      border-color: ${colors.blue};
-      color: ${colors.blue};
+      border: none;
+      border-bottom: solid 2px;
+      border-color: ${colors.cta};
+      color: ${colors.cta};
       transition: 100ms;
     }
   `

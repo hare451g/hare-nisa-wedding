@@ -6,11 +6,12 @@ const morningTheme = {
     ...colors,
     background: colors.gray6,
     foreground: colors.darkGray3,
+    card: colors.gray5,
+    cta: colors.blue,
   },
   typography: {
     ...typography,
     color: colors.darkGray3,
-    cta: colors.blue,
   },
 };
 

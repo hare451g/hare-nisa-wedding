@@ -13,8 +13,8 @@ const Input = styled.input(
     width: ${width || 'auto'};
 
     :focus {
-      border-color: ${colors.blue};
-      color: ${colors.blue};
+      border-color: ${colors.cta};
+      color: ${colors.cta};
       transition: 500ms;
     }
   `

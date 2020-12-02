@@ -6,11 +6,12 @@ const nightTheme = {
     ...colors,
     background: colors.darkGray6,
     foreground: colors.gray5,
+    card: colors.darkGray5,
+    cta: colors.pink,
   },
   typography: {
     ...typography,
     color: colors.gray5,
-    cta: colors.blue,
   },
 };
 
