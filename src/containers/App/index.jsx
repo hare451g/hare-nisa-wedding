@@ -20,6 +20,7 @@ import GuestbookForm from '../GuestbookForm';
 // utils
 import { themeMap } from './utils';
 import Rundown from '../../components/Rundown';
+import Gallery from '../../components/Gallery';
 
 function App() {
   const time = timeChecker();
@@ -35,6 +36,9 @@ function App() {
       <Container>
         <section>
           <Hero />
+        </section>
+        <section>
+          <Gallery time={time} />
         </section>
         <section>
           <Rundown />
