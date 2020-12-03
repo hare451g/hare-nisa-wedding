@@ -38,7 +38,7 @@ function App() {
       <GlobalStyles />
       <Container>
         <section id="hero">
-          <Hero />
+          <Hero time={time} />
         </section>
         <section id="gallery">
           <Gallery time={time} />

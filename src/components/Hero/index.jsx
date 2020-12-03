@@ -1,6 +1,7 @@
 import Flex from '../../styled/Flex';
 
 import heroMorning from '../../assets/hero_morning.jpg';
+
 import brideSrc from '../../assets/bride.jpg';
 import bride2Src from '../../assets/bride_2.jpg';
 
@@ -16,9 +17,11 @@ import {
   BridePhoto,
   BigAmperstand,
 } from './styled';
-import Navbar from './Navbar';
 
-const Hero = () => (
+import Navbar from './Navbar';
+import { selection } from './constants';
+
+const Hero = ({ time }) => (
   <>
     <Flex align="center" direction="column" justify="center">
       <Navbar />
@@ -28,7 +31,7 @@ const Hero = () => (
         </HeroSubtitle>
         <HeroTitle>Nisa &amp; Hendra's Wedding</HeroTitle>
       </HeroContainer>
-      <HeroImage alt="hero" src={heroMorning} />
+      <HeroImage alt="hero" src={selection[time] || heroMorning} />
     </Flex>
     <BrideSection>
       <Title>The Bride</Title>

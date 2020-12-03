@@ -6,6 +6,8 @@ const GalleryContainer = styled.div`
   grid-template-rows: repeat(14, 5vw);
   grid-gap: 15px;
 
+  padding: 16px;
+
   /* Morning Gallery */
   .morning_1 {
     grid-column-start: 1;
