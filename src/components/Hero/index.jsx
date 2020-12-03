@@ -35,7 +35,9 @@ const Hero = () => (
       <BridePhoto alt="another couple" src={bride2Src} />
       <div>
         <BrideName>Annisa Bayyina Azis</BrideName>
-        <BrideParentsName>Bapak Ichwan &amp; Ibu Yayah</BrideParentsName>
+        <BrideParentsName>
+          Bapak Ichwani &amp; Ibu Yayah Rokayah
+        </BrideParentsName>
       </div>
       <BigAmperstand>&amp;</BigAmperstand>
       <div>

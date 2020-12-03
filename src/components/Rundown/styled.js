@@ -14,6 +14,10 @@ const EventContainer = styled.div(
   `
 );
 
+const LiveLogo = styled.img`
+  border-radius: 30px;
+`;
+
 const Time = styled.p(
   ({ theme: { typography } }) => css`
     font-family: ${typography.family.monospace};
@@ -27,4 +31,4 @@ const Title = styled.h1(
   `
 );
 
-export { Container, EventContainer, Time, Title };
+export { Container, EventContainer, LiveLogo, Time, Title };
