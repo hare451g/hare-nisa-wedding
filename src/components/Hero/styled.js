@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 import Flex from '../../styled/Flex';
 
 const HeroContainer = styled(Flex)`
-  height: 50vh;
+  height: 30vh;
   padding: 0 16px;
   justify-content: flex-end;
 `;
 
 const HeroImage = styled.img`
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   object-fit: cover;
 `;
@@ -22,7 +22,7 @@ const HeroSubtitle = styled.p(
 );
 
 const HeroTitle = styled.h1(
-  ({ theme: { typography, colors } }) => css`
+  ({ theme: { typography } }) => css`
     font-family: ${typography.family.display};
     font-size: 42px;
     font-weight: 700;
@@ -30,4 +30,39 @@ const HeroTitle = styled.h1(
   `
 );
 
-export { HeroContainer, HeroImage, HeroSubtitle, HeroTitle };
+const NavbarContainer = styled(Flex)`
+  width: 100%;
+  height: 10vh;
+`;
+
+const NavItem = styled.li(
+  ({ theme: { typography } }) => css`
+    font-family: ${typography.family.monospace};
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+  `
+);
+
+const NavList = styled.ul`
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+
+  li {
+    display: inline;
+  }
+`;
+
+export {
+  HeroContainer,
+  HeroImage,
+  HeroSubtitle,
+  HeroTitle,
+  NavbarContainer,
+  NavItem,
+  NavList,
+};
