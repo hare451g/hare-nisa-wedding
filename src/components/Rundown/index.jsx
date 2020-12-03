@@ -10,7 +10,9 @@ const Rundown = () => (
     <p>
       Saturday, 5<sup>th</sup> December 2020
     </p>
-    <LiveLogo alt="instagram logo" src={igLogo} />
+    <a href="https://www.instagram.com/sadevva_/">
+      <LiveLogo alt="instagram logo" src={igLogo} />
+    </a>
     <h3>Live from Kediaman Bapak Ichwani</h3>
     <RundownContainer>
       {events.map(({ startTime, endTime, descriptions }, index) => (
