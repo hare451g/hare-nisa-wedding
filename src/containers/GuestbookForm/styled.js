@@ -2,13 +2,18 @@ import styled, { css } from 'styled-components';
 
 import Flex from '../../styled/Flex';
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-`;
+const Form = styled.form(
+  ({ theme: { colors } }) => css`
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    border-top: 1px solid ${colors.gray3};
+    padding-bottom: 32px;
+  `
+);
 
 const FormGroup = styled(Flex)`
+  width: 100%;
   margin-top: 16px;
   margin-bottom: 16px;
 `;

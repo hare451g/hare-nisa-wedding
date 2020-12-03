@@ -2,13 +2,11 @@ import { useState } from 'react';
 
 // Styled components
 import Button from '../../styled/Button';
-import Card from '../../styled/Card';
-import Label from '../../styled/Label';
 import Input from '../../styled/Input';
 import Textarea from '../../styled/Textarea';
 
 // Local Styled
-import { Form, FormGroup, Subtitle, Title } from './styled';
+import { Form, FormGroup, Subtitle } from './styled';
 import guestbook from '../../lib/api/guestbook';
 
 function GuestbookForm() {
@@ -54,10 +52,9 @@ function GuestbookForm() {
   const handleChangeMessage = (e) => setMessage(e.target.value);
 
   return (
-    <Card margin="32px auto" padding="16px" width="400px">
-      <Title>Guest book</Title>
-      <Subtitle>Send your best wishes for the bride</Subtitle>
+    <div>
       <Form onSubmit={handleSubmitform}>
+        <Subtitle>Send your best wishes for the bride</Subtitle>
         <FormGroup alignItems="center" justifyContent="space-between">
           <Input
             name="name"
@@ -65,7 +62,7 @@ function GuestbookForm() {
             placeholder="Your name"
             type="text"
             value={name}
-            width="280px"
+            width="100%"
           />
         </FormGroup>
         <FormGroup alignItems="flex-start" justifyContent="space-between">
@@ -75,14 +72,14 @@ function GuestbookForm() {
             onChange={handleChangeMessage}
             placeholder="Your wishes for the bride"
             value={message}
-            width="280px"
+            width="100%"
           />
         </FormGroup>
         <Button type="submit" disabled={state.isLoading}>
           {state.isLoading ? 'Sending . . . ' : 'Send'}
         </Button>
       </Form>
-    </Card>
+    </div>
   );
 }
 

@@ -20,7 +20,7 @@ import Rundown from '../../components/Rundown';
 import Gallery from '../../components/Gallery';
 
 // containers
-import GuestbookForm from '../GuestbookForm';
+import Guestbook from '../Guestbook';
 
 // utils
 import { themeMap } from './utils';
@@ -47,7 +47,7 @@ function App() {
           <Rundown />
         </section>
         <section id="guestbook-form">
-          <GuestbookForm />
+          <Guestbook />
         </section>
       </Container>
     </ThemeProvider>
