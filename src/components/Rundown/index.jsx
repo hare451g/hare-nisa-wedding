@@ -1,5 +1,5 @@
 import { events } from './constants';
-import { Container, LiveLogo, Title } from './styled';
+import { Container, LiveLogo, RundownContainer, Title } from './styled';
 import Event from './Event';
 
 import igLogo from '../../assets/ig_logo.svg';
@@ -12,7 +12,7 @@ const Rundown = () => (
     </p>
     <LiveLogo alt="instagram logo" src={igLogo} />
     <h3>Live from Kediaman Bapak Ichwani</h3>
-    <div>
+    <RundownContainer>
       {events.map(({ startTime, endTime, descriptions }, index) => (
         <Event
           key={`rundown-event-${index + 1}`}
@@ -21,7 +21,7 @@ const Rundown = () => (
           descriptions={descriptions}
         />
       ))}
-    </div>
+    </RundownContainer>
   </Container>
 );
 

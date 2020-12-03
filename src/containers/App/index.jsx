@@ -1,6 +1,8 @@
 import { ThemeProvider } from 'styled-components';
 import { useEffect, useState } from 'react';
 
+import 'react-bnb-gallery/dist/style.css';
+
 // theme
 import noonTheme from '../../lib/themes/noonTheme';
 

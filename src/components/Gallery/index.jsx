@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import ReactBnbGallery from 'react-bnb-gallery';
+
 // time keys
 import { TIME_KEYS } from '../../lib/timeChecker';
 import { morningGallery, nightGallery, noonGallery } from './constants';
@@ -10,15 +13,29 @@ const selection = {
 };
 
 function Gallery({ time }) {
+  const [isOpen, setOpen] = useState(false);
+
   const selected = selection[time] || [];
+  const sources = selected.map(({ src }) => src);
+
   return (
     <>
       <Title>Gallery</Title>
       <GalleryContainer>
-        {selected.map(({ key, src }, index) => (
-          <GalleryImage className={key} key={key} src={src} />
+        {selected.map(({ key, src }) => (
+          <GalleryImage
+            className={key}
+            key={key}
+            src={src}
+            onClick={() => setOpen(true)}
+          />
         ))}
       </GalleryContainer>
+      <ReactBnbGallery
+        show={isOpen}
+        photos={sources}
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }

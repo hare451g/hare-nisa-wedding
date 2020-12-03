@@ -18,6 +18,10 @@ const LiveLogo = styled.img`
   border-radius: 30px;
 `;
 
+const RundownContainer = styled.div`
+  display: none;
+`;
+
 const Time = styled.p(
   ({ theme: { typography } }) => css`
     font-family: ${typography.family.monospace};
@@ -31,4 +35,4 @@ const Title = styled.h1(
   `
 );
 
-export { Container, EventContainer, LiveLogo, Time, Title };
+export { Container, EventContainer, LiveLogo, RundownContainer, Time, Title };
