@@ -54,12 +54,11 @@ function GuestbookForm() {
   const handleChangeMessage = (e) => setMessage(e.target.value);
 
   return (
-    <Card padding="16px" width="400px">
+    <Card margin="32px auto" padding="16px" width="400px">
       <Title>Guest book</Title>
       <Subtitle>Send your best wishes for the bride</Subtitle>
       <Form onSubmit={handleSubmitform}>
         <FormGroup alignItems="center" justifyContent="space-between">
-          <Label htmlFor="name">Name</Label>
           <Input
             name="name"
             onChange={handleChangeName}
@@ -70,7 +69,6 @@ function GuestbookForm() {
           />
         </FormGroup>
         <FormGroup alignItems="flex-start" justifyContent="space-between">
-          <Label htmlFor="message">Message</Label>
           <Textarea
             maxLength={280}
             name="message"

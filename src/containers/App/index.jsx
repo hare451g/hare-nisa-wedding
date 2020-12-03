@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import noonTheme from '../../lib/themes/noonTheme';
 
 // utils
-import timeChecker from '../../lib/timeChecker';
+import timeChecker, { TIME_KEYS } from '../../lib/timeChecker';
 
 // components
 import Hero from '../../components/Hero';
@@ -14,16 +14,17 @@ import Hero from '../../components/Hero';
 import Container from '../../styled/Container';
 import GlobalStyles from '../../styled/Global';
 
+import Rundown from '../../components/Rundown';
+import Gallery from '../../components/Gallery';
+
 // containers
 import GuestbookForm from '../GuestbookForm';
 
 // utils
 import { themeMap } from './utils';
-import Rundown from '../../components/Rundown';
-import Gallery from '../../components/Gallery';
 
 function App() {
-  const time = timeChecker();
+  const time = timeChecker() || TIME_KEYS.MORNING;
   const [theme, setTheme] = useState(noonTheme);
 
   useEffect(() => {
@@ -34,16 +35,16 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Container>
-        <section>
+        <section id="hero">
           <Hero />
         </section>
-        <section>
+        <section id="gallery">
           <Gallery time={time} />
         </section>
-        <section>
+        <section id="rundown">
           <Rundown />
         </section>
-        <section>
+        <section id="guestbook-form">
           <GuestbookForm />
         </section>
       </Container>
