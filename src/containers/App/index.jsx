@@ -29,6 +29,8 @@ function App() {
   const time = timeChecker() || TIME_KEYS.MORNING;
   const [theme, setTheme] = useState(noonTheme);
 
+  console.log('time', time);
+
   useEffect(() => {
     setTheme(themeMap[time]);
   }, [time]);
