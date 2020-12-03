@@ -15,8 +15,7 @@ function Guestbook() {
     isLoading: false,
   });
 
-  useEffect(() => {
-    // perform request
+  const getEntries = () => {
     setState({
       data: [],
       error: null,
@@ -39,6 +38,11 @@ function Guestbook() {
           loading: false,
         });
       });
+  };
+
+  useEffect(() => {
+    // perform request
+    getEntries();
   }, []);
 
   const entries = state.data.map(({ _id: id, date, name, message }) => (
@@ -57,7 +61,7 @@ function Guestbook() {
         {state.data.length > 0 ? entries : <p>No entries</p>}
       </Container>
 
-      <GuestbookForm />
+      <GuestbookForm afterSubmit={getEntries} />
     </Card>
   );
 }
