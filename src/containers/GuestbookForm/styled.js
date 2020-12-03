@@ -27,7 +27,7 @@ const Title = styled.h1(
     padding: 0;
     margin: 0;
     font-family: ${typography.family.display};
-    font-size: ${typography.size.display};
+    font-size: ${typography.size.large};
     text-align: center;
   `
 );

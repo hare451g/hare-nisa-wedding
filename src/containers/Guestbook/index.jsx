@@ -5,7 +5,14 @@ import Card from '../../styled/Card';
 
 import GuestbookForm from '../GuestbookForm';
 
-import { Container, Entry, MessageField, NameField, Title } from './styled';
+import {
+  Container,
+  DateField,
+  Entry,
+  MessageField,
+  NameField,
+  Title,
+} from './styled';
 
 function Guestbook() {
   // request states
@@ -45,12 +52,18 @@ function Guestbook() {
     getEntries();
   }, []);
 
+  const composeDate = (date) => {
+    const raw = new Date(date);
+    const dateOnly = `${raw.getDate()}/${raw.getMonth()}/${raw.getFullYear()}`;
+    const time = `${raw.getHours()}:${raw.getMinutes()}`;
+    return `${dateOnly} - ${time}`;
+  };
+
   const entries = state.data.map(({ _id: id, date, name, message }) => (
     <Entry key={id}>
-      <NameField>
-        {name} - {date}
-      </NameField>
+      <NameField>{name}</NameField>
       <MessageField>{message}</MessageField>
+      <DateField>{composeDate(date)}</DateField>
     </Entry>
   ));
 
